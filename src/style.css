@@ -33,3 +33,12 @@ body {
 .dropdown-content {
   color: #000;
 }
+
+.dropdown-content.hidden {
+  display: none;
+}
+
+.dropdown-content ul {
+  display: flex;
+  flex-direction: column;
+}
