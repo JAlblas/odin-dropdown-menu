@@ -1,4 +1,35 @@
 /* styles.css */
 body {
-  background-color: rebeccapurple;
+  background-color: #efefef;
+  color: #fff;
+}
+
+.menu {
+  width: 500px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
+
+.menu-item {
+  flex: 1;
+}
+
+.menu-item button {
+  padding: 25px 10px;
+  border: none;
+  background-color: rgb(40, 63, 179);
+  color: #fff;
+  width: 100px;
+}
+
+.menu ul {
+  display: flex;
+}
+
+.dropdown-content {
+  color: #000;
 }
