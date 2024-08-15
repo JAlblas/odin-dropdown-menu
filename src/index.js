@@ -1,5 +1,6 @@
 import "./style.css";
 
+const dropdownMenu = document.querySelector(".dropdown-menu");
 const dropdownContent = document.querySelector(".dropdown-content");
 const dropdownButton = document.querySelector(".dropdown-button");
 
@@ -8,7 +9,6 @@ dropdownButton.addEventListener("mouseenter", () => {
   dropdownContent.classList.toggle("hidden");
 });
 
-dropdownButton.addEventListener("mouseleave", () => {
-  console.log("IS THIS CALLED?");
+dropdownMenu.parentElement.addEventListener("mouseleave", () => {
   dropdownContent.classList.toggle("hidden");
 });
