@@ -1,14 +1,21 @@
 import "./style.css";
 
-const dropdownMenu = document.querySelector(".dropdown-menu");
-const dropdownContent = document.querySelector(".dropdown-content");
-const dropdownButton = document.querySelector(".dropdown-button");
+const dropdownMenus = document.querySelectorAll(".dropdown-menu");
+const dropdownContents = document.querySelectorAll(".dropdown-content");
+const dropdownButtons = document.querySelectorAll(".dropdown-button");
 
-dropdownButton.addEventListener("mouseenter", () => {
-  console.log("IS THIS CALLED?");
-  dropdownContent.classList.toggle("hidden");
+dropdownButtons.forEach((button) => {
+  button.addEventListener("mouseenter", () => {
+    const dropdownContent =
+      button.parentElement.querySelector(".dropdown-content");
+    dropdownContent.classList.toggle("hidden");
+  });
 });
 
-dropdownMenu.parentElement.addEventListener("mouseleave", () => {
-  dropdownContent.classList.toggle("hidden");
+dropdownMenus.forEach((menu) => {
+  console.log(menu);
+  menu.addEventListener("mouseleave", () => {
+    const content = menu.querySelector(".dropdown-content");
+    content.classList.toggle("hidden");
+  });
 });
